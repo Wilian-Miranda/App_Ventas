@@ -29,7 +29,7 @@ namespace AppVentas.VISTA
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dtgUsuarios = new System.Windows.Forms.DataGridView();
@@ -108,12 +108,12 @@ namespace AppVentas.VISTA
             this.dtgUsuarios.Name = "dtgUsuarios";
             this.dtgUsuarios.ReadOnly = true;
             this.dtgUsuarios.RowHeadersVisible = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Orchid;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Orchid;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dtgUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgUsuarios.Size = new System.Drawing.Size(582, 296);
             this.dtgUsuarios.TabIndex = 1;
@@ -142,6 +142,8 @@ namespace AppVentas.VISTA
             // 
             // txtPass
             // 
+            this.txtPass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPass.Location = new System.Drawing.Point(124, 38);
             this.txtPass.Margin = new System.Windows.Forms.Padding(5, 4, 5, 29);
             this.txtPass.Name = "txtPass";
@@ -161,6 +163,8 @@ namespace AppVentas.VISTA
             // 
             // txtCorreo
             // 
+            this.txtCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCorreo.ForeColor = System.Drawing.Color.Black;
             this.txtCorreo.Location = new System.Drawing.Point(124, 6);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(5, 4, 5, 29);
@@ -238,6 +242,8 @@ namespace AppVentas.VISTA
             // 
             // panel5
             // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.panel6);
@@ -245,7 +251,6 @@ namespace AppVentas.VISTA
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.txtCorreo);
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(185, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel5.Name = "panel5";
@@ -278,6 +283,8 @@ namespace AppVentas.VISTA
             // 
             // txtPassAntigua
             // 
+            this.txtPassAntigua.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassAntigua.Location = new System.Drawing.Point(123, 20);
             this.txtPassAntigua.Margin = new System.Windows.Forms.Padding(5, 4, 5, 29);
             this.txtPassAntigua.Name = "txtPassAntigua";
@@ -310,11 +317,11 @@ namespace AppVentas.VISTA
             // panel7
             // 
             this.panel7.Controls.Add(this.btnLimpiar);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(605, 0);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel7.Location = new System.Drawing.Point(608, 0);
             this.panel7.Name = "panel7";
             this.panel7.Padding = new System.Windows.Forms.Padding(13, 0, 20, 0);
-            this.panel7.Size = new System.Drawing.Size(142, 158);
+            this.panel7.Size = new System.Drawing.Size(139, 158);
             this.panel7.TabIndex = 2;
             // 
             // btnLimpiar
@@ -327,7 +334,7 @@ namespace AppVentas.VISTA
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Padding = new System.Windows.Forms.Padding(0, 0, 17, 0);
-            this.btnLimpiar.Size = new System.Drawing.Size(109, 50);
+            this.btnLimpiar.Size = new System.Drawing.Size(106, 50);
             this.btnLimpiar.TabIndex = 3;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -348,6 +355,7 @@ namespace AppVentas.VISTA
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(259, 12);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);

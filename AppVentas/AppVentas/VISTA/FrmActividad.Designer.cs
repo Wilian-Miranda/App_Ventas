@@ -68,6 +68,7 @@ namespace AppVentas.VISTA
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(261, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);

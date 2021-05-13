@@ -29,7 +29,7 @@ namespace AppVentas.VISTA
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.dtgDoc = new System.Windows.Forms.DataGridView();
@@ -99,12 +99,12 @@ namespace AppVentas.VISTA
             this.dtgDoc.Name = "dtgDoc";
             this.dtgDoc.ReadOnly = true;
             this.dtgDoc.RowHeadersVisible = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Orchid;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgDoc.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Orchid;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgDoc.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgDoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgDoc.Size = new System.Drawing.Size(581, 304);
             this.dtgDoc.TabIndex = 1;
@@ -126,6 +126,8 @@ namespace AppVentas.VISTA
             // 
             // txtDocumento
             // 
+            this.txtDocumento.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDocumento.ForeColor = System.Drawing.Color.Black;
             this.txtDocumento.Location = new System.Drawing.Point(139, 56);
             this.txtDocumento.Margin = new System.Windows.Forms.Padding(5, 4, 5, 29);
@@ -203,10 +205,11 @@ namespace AppVentas.VISTA
             // 
             // panel5
             // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.txtDocumento);
             this.panel5.Controls.Add(this.label3);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.ForeColor = System.Drawing.Color.Black;
             this.panel5.Location = new System.Drawing.Point(213, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -230,7 +233,7 @@ namespace AppVentas.VISTA
             // panel6
             // 
             this.panel6.Controls.Add(this.button1);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.Location = new System.Drawing.Point(604, 0);
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
@@ -267,7 +270,9 @@ namespace AppVentas.VISTA
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(310, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";

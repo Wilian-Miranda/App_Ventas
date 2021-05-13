@@ -31,6 +31,7 @@ namespace AppVentas.VISTA
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -54,8 +55,8 @@ namespace AppVentas.VISTA
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -64,7 +65,6 @@ namespace AppVentas.VISTA
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).BeginInit();
-            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -79,8 +79,19 @@ namespace AppVentas.VISTA
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Wheat;
+            this.panel8.Controls.Add(this.label1);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(10, 10);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(727, 47);
+            this.panel8.TabIndex = 1;
+            // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(263, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -92,9 +103,9 @@ namespace AppVentas.VISTA
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.panel6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(10, 77);
             this.panel2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -106,7 +117,7 @@ namespace AppVentas.VISTA
             // panel6
             // 
             this.panel6.Controls.Add(this.btnLimpiar);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.Location = new System.Drawing.Point(604, 0);
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(13, 0, 20, 0);
@@ -131,6 +142,8 @@ namespace AppVentas.VISTA
             // 
             // panel5
             // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.txtDUI);
             this.panel5.Controls.Add(this.label4);
@@ -138,7 +151,6 @@ namespace AppVentas.VISTA
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.txtNombre);
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(140)))), ((int)(((byte)(109)))));
             this.panel5.Location = new System.Drawing.Point(213, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -149,6 +161,8 @@ namespace AppVentas.VISTA
             // 
             // txtDUI
             // 
+            this.txtDUI.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDUI.Location = new System.Drawing.Point(128, 104);
             this.txtDUI.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtDUI.Name = "txtDUI";
@@ -170,6 +184,8 @@ namespace AppVentas.VISTA
             // 
             // txtDireccion
             // 
+            this.txtDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDireccion.Location = new System.Drawing.Point(128, 65);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(5, 4, 5, 29);
             this.txtDireccion.Name = "txtDireccion";
@@ -191,6 +207,8 @@ namespace AppVentas.VISTA
             // 
             // txtNombre
             // 
+            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombre.Location = new System.Drawing.Point(128, 26);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(5, 4, 5, 29);
             this.txtNombre.Name = "txtNombre";
@@ -312,6 +330,7 @@ namespace AppVentas.VISTA
             this.dtgClientes.AllowUserToAddRows = false;
             this.dtgClientes.AllowUserToDeleteRows = false;
             this.dtgClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgClientes.BackgroundColor = System.Drawing.Color.White;
             this.dtgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -359,16 +378,6 @@ namespace AppVentas.VISTA
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Wheat;
-            this.panel8.Controls.Add(this.label1);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(10, 10);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(727, 47);
-            this.panel8.TabIndex = 1;
-            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -386,6 +395,8 @@ namespace AppVentas.VISTA
             this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "FrmClientes";
             this.panel1.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -395,8 +406,6 @@ namespace AppVentas.VISTA
             this.panel4.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).EndInit();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
