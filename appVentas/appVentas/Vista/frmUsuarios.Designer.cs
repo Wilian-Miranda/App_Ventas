@@ -1,7 +1,7 @@
 ﻿
-namespace appVentas.Vista
+namespace AppVentas.VISTA
 {
-    partial class frmUsuarios
+    partial class FrmUsuarios
     {
         /// <summary>
         /// Required designer variable.
@@ -29,355 +29,326 @@ namespace appVentas.Vista
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.txtBuscar = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.txtId = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtPass = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.dtgUsuarios = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.btnBuscar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnGuardar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnActualizar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnEliminar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgUsuarios = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.txtPassAntigua = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsuarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscar.BorderColorFocused = System.Drawing.Color.Blue;
-            this.txtBuscar.BorderColorIdle = System.Drawing.Color.RoyalBlue;
-            this.txtBuscar.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.txtBuscar.BorderThickness = 2;
-            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtBuscar.isPassword = false;
-            this.txtBuscar.Location = new System.Drawing.Point(767, 69);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(156, 38);
-            this.txtBuscar.TabIndex = 35;
-            this.txtBuscar.Text = "Buscar";
-            this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtBuscar.Enter += new System.EventHandler(this.txtBuscar_Enter);
-            this.txtBuscar.Leave += new System.EventHandler(this.txtBuscar_Leave);
-            // 
-            // txtId
-            // 
-            this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtId.AutoSize = true;
-            this.txtId.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtId.Enabled = false;
-            this.txtId.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtId.HintForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtId.HintText = "Id";
-            this.txtId.isPassword = false;
-            this.txtId.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtId.LineIdleColor = System.Drawing.Color.RoyalBlue;
-            this.txtId.LineMouseHoverColor = System.Drawing.Color.CornflowerBlue;
-            this.txtId.LineThickness = 4;
-            this.txtId.Location = new System.Drawing.Point(698, 209);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(225, 39);
-            this.txtId.TabIndex = 34;
-            this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuCustomLabel1.AutoEllipsis = true;
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(706, 24);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(191, 23);
-            this.bunifuCustomLabel1.TabIndex = 31;
-            this.bunifuCustomLabel1.Text = "Gestion de Usuarios";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.AutoSize = true;
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtEmail.HintForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtEmail.HintText = "Correo";
-            this.txtEmail.isPassword = false;
-            this.txtEmail.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtEmail.LineIdleColor = System.Drawing.Color.RoyalBlue;
-            this.txtEmail.LineMouseHoverColor = System.Drawing.Color.CornflowerBlue;
-            this.txtEmail.LineThickness = 4;
-            this.txtEmail.Location = new System.Drawing.Point(698, 269);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(225, 39);
-            this.txtEmail.TabIndex = 29;
-            this.txtEmail.Text = "Precio";
-            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtPass
-            // 
-            this.txtPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPass.AutoSize = true;
-            this.txtPass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPass.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtPass.HintForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtPass.HintText = "Contrasena";
-            this.txtPass.isPassword = false;
-            this.txtPass.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtPass.LineIdleColor = System.Drawing.Color.RoyalBlue;
-            this.txtPass.LineMouseHoverColor = System.Drawing.Color.CornflowerBlue;
-            this.txtPass.LineThickness = 4;
-            this.txtPass.Location = new System.Drawing.Point(698, 327);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(225, 39);
-            this.txtPass.TabIndex = 27;
-            this.txtPass.Text = "Estado";
-            this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // dtgUsuarios
             // 
             this.dtgUsuarios.AllowUserToAddRows = false;
             this.dtgUsuarios.AllowUserToDeleteRows = false;
-            this.dtgUsuarios.AllowUserToResizeColumns = false;
-            this.dtgUsuarios.AllowUserToResizeRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dtgUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
-            this.dtgUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgUsuarios.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dtgUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dtgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column4,
             this.Column1,
-            this.Column2});
-            this.dtgUsuarios.DoubleBuffered = true;
-            this.dtgUsuarios.EnableHeadersVisualStyles = false;
-            this.dtgUsuarios.GridColor = System.Drawing.Color.SteelBlue;
-            this.dtgUsuarios.HeaderBgColor = System.Drawing.Color.RoyalBlue;
-            this.dtgUsuarios.HeaderForeColor = System.Drawing.Color.White;
-            this.dtgUsuarios.Location = new System.Drawing.Point(27, 23);
+            this.Column2,
+            this.Column3});
+            this.dtgUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgUsuarios.Location = new System.Drawing.Point(20, 20);
             this.dtgUsuarios.Name = "dtgUsuarios";
             this.dtgUsuarios.ReadOnly = true;
-            this.dtgUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            this.dtgUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle18;
-            this.dtgUsuarios.Size = new System.Drawing.Size(639, 423);
-            this.dtgUsuarios.TabIndex = 37;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.btnBuscar.Image = global::appVentas.Properties.Resources.search__1_;
-            this.btnBuscar.ImageActive = null;
-            this.btnBuscar.Location = new System.Drawing.Point(698, 69);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(50, 50);
-            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnBuscar.TabIndex = 36;
-            this.btnBuscar.TabStop = false;
-            this.btnBuscar.Zoom = 10;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Activecolor = System.Drawing.Color.CornflowerBlue;
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.AutoSize = true;
-            this.btnGuardar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGuardar.BorderRadius = 7;
-            this.btnGuardar.ButtonText = "Guardar";
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnGuardar.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnGuardar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnGuardar.Iconimage = global::appVentas.Properties.Resources.disco_flexible;
-            this.btnGuardar.Iconimage_right = null;
-            this.btnGuardar.Iconimage_right_Selected = null;
-            this.btnGuardar.Iconimage_Selected = null;
-            this.btnGuardar.IconMarginLeft = 0;
-            this.btnGuardar.IconMarginRight = 0;
-            this.btnGuardar.IconRightVisible = true;
-            this.btnGuardar.IconRightZoom = 0D;
-            this.btnGuardar.IconVisible = true;
-            this.btnGuardar.IconZoom = 90D;
-            this.btnGuardar.IsTab = false;
-            this.btnGuardar.Location = new System.Drawing.Point(698, 398);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Normalcolor = System.Drawing.SystemColors.Control;
-            this.btnGuardar.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.btnGuardar.OnHoverTextColor = System.Drawing.SystemColors.Control;
-            this.btnGuardar.selected = false;
-            this.btnGuardar.Size = new System.Drawing.Size(225, 49);
-            this.btnGuardar.TabIndex = 30;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnGuardar.Textcolor = System.Drawing.Color.RoyalBlue;
-            this.btnGuardar.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Activecolor = System.Drawing.Color.CornflowerBlue;
-            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnActualizar.AutoSize = true;
-            this.btnActualizar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnActualizar.BorderRadius = 7;
-            this.btnActualizar.ButtonText = "Actualizar";
-            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnActualizar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnActualizar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnActualizar.Iconimage = global::appVentas.Properties.Resources.edit;
-            this.btnActualizar.Iconimage_right = null;
-            this.btnActualizar.Iconimage_right_Selected = null;
-            this.btnActualizar.Iconimage_Selected = null;
-            this.btnActualizar.IconMarginLeft = 0;
-            this.btnActualizar.IconMarginRight = 0;
-            this.btnActualizar.IconRightVisible = true;
-            this.btnActualizar.IconRightZoom = 0D;
-            this.btnActualizar.IconVisible = true;
-            this.btnActualizar.IconZoom = 90D;
-            this.btnActualizar.IsTab = false;
-            this.btnActualizar.Location = new System.Drawing.Point(199, 452);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Normalcolor = System.Drawing.SystemColors.Control;
-            this.btnActualizar.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.btnActualizar.OnHoverTextColor = System.Drawing.SystemColors.Control;
-            this.btnActualizar.selected = false;
-            this.btnActualizar.Size = new System.Drawing.Size(168, 49);
-            this.btnActualizar.TabIndex = 39;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnActualizar.Textcolor = System.Drawing.Color.RoyalBlue;
-            this.btnActualizar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Activecolor = System.Drawing.Color.CornflowerBlue;
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEliminar.AutoSize = true;
-            this.btnEliminar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEliminar.BorderRadius = 7;
-            this.btnEliminar.ButtonText = "Eliminar";
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnEliminar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnEliminar.Iconimage = global::appVentas.Properties.Resources.remove;
-            this.btnEliminar.Iconimage_right = null;
-            this.btnEliminar.Iconimage_right_Selected = null;
-            this.btnEliminar.Iconimage_Selected = null;
-            this.btnEliminar.IconMarginLeft = 0;
-            this.btnEliminar.IconMarginRight = 0;
-            this.btnEliminar.IconRightVisible = true;
-            this.btnEliminar.IconRightZoom = 0D;
-            this.btnEliminar.IconVisible = true;
-            this.btnEliminar.IconZoom = 90D;
-            this.btnEliminar.IsTab = false;
-            this.btnEliminar.Location = new System.Drawing.Point(25, 451);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Normalcolor = System.Drawing.SystemColors.Control;
-            this.btnEliminar.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.btnEliminar.OnHoverTextColor = System.Drawing.SystemColors.Control;
-            this.btnEliminar.selected = false;
-            this.btnEliminar.Size = new System.Drawing.Size(168, 49);
-            this.btnEliminar.TabIndex = 38;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnEliminar.Textcolor = System.Drawing.Color.RoyalBlue;
-            this.btnEliminar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Id";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.dtgUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgUsuarios.Size = new System.Drawing.Size(602, 281);
+            this.dtgUsuarios.TabIndex = 0;
+            this.dtgUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsuarios_CellClick);
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Correo";
+            this.Column1.FillWeight = 76.14214F;
+            this.Column1.HeaderText = "Código";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Contrasena";
+            this.Column2.FillWeight = 111.9289F;
+            this.Column2.HeaderText = "E-mail";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
-            // frmUsuarios
+            // Column3
+            // 
+            this.Column3.FillWeight = 111.9289F;
+            this.Column3.HeaderText = "Contraseña";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.dtgUsuarios);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 197);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(20);
+            this.panel4.Size = new System.Drawing.Size(642, 321);
+            this.panel4.TabIndex = 7;
+            // 
+            // txtPass
+            // 
+            this.txtPass.Location = new System.Drawing.Point(89, 57);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.Size = new System.Drawing.Size(324, 20);
+            this.txtPass.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(19, 60);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Contraseña:";
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Location = new System.Drawing.Point(89, 18);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(324, 20);
+            this.txtCorreo.TabIndex = 3;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnActualizar.Location = new System.Drawing.Point(0, 70);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(93, 50);
+            this.btnActualizar.TabIndex = 1;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAgregar.Location = new System.Drawing.Point(0, 20);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(93, 50);
+            this.btnAgregar.TabIndex = 0;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "E-mail:";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnEliminar);
+            this.panel3.Controls.Add(this.btnActualizar);
+            this.panel3.Controls.Add(this.btnAgregar);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(642, 197);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(0, 20, 10, 0);
+            this.panel3.Size = new System.Drawing.Size(103, 321);
+            this.panel3.TabIndex = 6;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEliminar.Location = new System.Drawing.Point(0, 120);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(93, 50);
+            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.txtPass);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.txtCorreo);
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(194, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(448, 151);
+            this.panel5.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 97);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(326, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Ingrese su antigua contraseña para modificar y eliminar los registros:";
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.txtPassAntigua);
+            this.panel6.Controls.Add(this.label4);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, 98);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(446, 51);
+            this.panel6.TabIndex = 6;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            // 
+            // txtPassAntigua
+            // 
+            this.txtPassAntigua.Location = new System.Drawing.Point(88, 17);
+            this.txtPassAntigua.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
+            this.txtPassAntigua.Name = "txtPassAntigua";
+            this.txtPassAntigua.PasswordChar = '*';
+            this.txtPassAntigua.Size = new System.Drawing.Size(324, 20);
+            this.txtPassAntigua.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 20);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Contraseña:";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnLimpiar);
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 46);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.panel2.Size = new System.Drawing.Size(745, 151);
+            this.panel2.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(305, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "GESTIÓN DE USUARIOS";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(745, 46);
+            this.panel1.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::AppVentas.Properties.Resources.aprobar;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(20);
+            this.pictureBox1.Size = new System.Drawing.Size(194, 151);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLimpiar.Location = new System.Drawing.Point(642, 0);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.btnLimpiar.Size = new System.Drawing.Size(93, 23);
+            this.btnLimpiar.TabIndex = 2;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // FrmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(951, 527);
-            this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.dtgUsuarios);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.bunifuCustomLabel1);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtPass);
+            this.ClientSize = new System.Drawing.Size(745, 518);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmUsuarios";
-            this.Text = "frmUsuarios";
+            this.Name = "FrmUsuarios";
+            this.Text = "ClsDUsuarios";
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsuarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuImageButton btnBuscar;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtBuscar;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtId;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private Bunifu.Framework.UI.BunifuFlatButton btnGuardar;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtEmail;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPass;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dtgUsuarios;
-        private Bunifu.Framework.UI.BunifuFlatButton btnActualizar;
-        private Bunifu.Framework.UI.BunifuFlatButton btnEliminar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridView dtgUsuarios;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtPassAntigua;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

@@ -1,6 +1,4 @@
-﻿using appVentas.DAO;
-using appVentas.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,159 +7,113 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppVentas.DAO;
+using AppVentas.MODELO;
 
-namespace appVentas.Vista
+namespace AppVentas.VISTA
 {
-    public partial class frmUsuarios : Form
+    public partial class FrmUsuarios : Form
     {
-        ClsUsuarios usuarios = new ClsUsuarios();
-        private bool editar = false;
-        public frmUsuarios()
+        public FrmUsuarios()
         {
             InitializeComponent();
-            Cargar();
-            Clean();
+            load();
+        }
+        ClsAcceso acceso = new ClsAcceso();
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
-        private void Clean()
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
-            txtId.Text = "";
-            txtEmail.Text = "";
-            txtPass.Text = "";
+            
+            ClsDUsuarios Vusuarios = new ClsDUsuarios();
 
-        }
-        private void Cargar()
-        {
-            dtgUsuarios.Rows.Clear();
-            List<tb_usuario> Lista = usuarios.CargarUsuarios();
-
-            foreach (var iteracion in Lista)
+            if (txtCorreo.Text=="" && txtPass.Text=="")
             {
-                dtgUsuarios.Rows.Add(iteracion.iDUsuario, iteracion.email, iteracion.contrasena);
+                MessageBox.Show("Datos inválidos");
             }
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            tb_usuario guardarUsuario = new tb_usuario();
-            if (editar == false)
-            {
-                try
-                {
-                    if (txtId.Text == "")
-                    {
-                        guardarUsuario.email = txtEmail.Text;
-                        guardarUsuario.contrasena = txtPass.Text;
-
-                        usuarios.GuardarUsuarios(guardarUsuario);
-                        Cargar();
-                        Clean();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Ha ocurrido un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-
             else
             {
-                try
+                if (acceso.VerificarEmail(txtCorreo.Text) == true)
                 {
-                    guardarUsuario.iDUsuario = Convert.ToInt32(txtId.Text);
-                    guardarUsuario.email = txtEmail.Text;
-                    guardarUsuario.contrasena = txtPass.Text;
-
-                    usuarios.ActualizarUsuarios(guardarUsuario);
-
-                    Cargar();
-                    Clean();
+                    MessageBox.Show("¡El usuario ya ha sido registrado, por favor elija un nuevo nombre de usuario!");
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Ha ocurrido un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    using (sistema_ventasEntities db = new sistema_ventasEntities())
+                    {
+                        tb_usuario usuario = new tb_usuario();
+                        usuario.email = txtCorreo.Text;
+                        usuario.contrasena = txtPass.Text;
+                        Vusuarios.GuardarUsuario(usuario);
+                        load();
+                    }
+                }
+            }
+        
+        }
+        private string correoS = "";
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+
+            ClsDUsuarios Vusuarios = new ClsDUsuarios();
+
+            if (txtCorreo.Text == "" && txtPass.Text == "")
+            {
+                MessageBox.Show("Datos inválidos");
+            }
+            else
+            {
+
+                if (acceso.VerificarPass(txtPassAntigua.Text, correoS) == true)
+                {
+                    using (sistema_ventasEntities db = new sistema_ventasEntities())
+                    {
+                        tb_usuario usuario = new tb_usuario();
+                        usuario.iDUsuario = Convert.ToInt32(dtgUsuarios.CurrentRow.Cells[0].Value.ToString());
+                        usuario.email = txtCorreo.Text;
+                        usuario.contrasena = txtPass.Text;
+                        Vusuarios.ActualizarUsuario(usuario);
+                        load();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("¡Contraseña incorrecta!");
                 }
             }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            try
+            using (sistema_ventasEntities db = new sistema_ventasEntities())
             {
-                if (dtgUsuarios.SelectedRows.Count > 0)
-                {
-                    txtId.Text = dtgUsuarios.CurrentRow.Cells[0].Value.ToString();
-                    usuarios.EliminarUsuarios(Convert.ToInt32(txtId.Text));
-
-                    Cargar();
-                    Clean();
-                }
-                else
-                {
-                    MessageBox.Show("Selecciona una fila", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ha ocurrido un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ClsDUsuarios Vusuario = new ClsDUsuarios();
+                Vusuario.EliminarUsuario(Convert.ToInt32(dtgUsuarios.CurrentRow.Cells[0].Value.ToString()));
+                load();
             }
         }
 
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            if (dtgUsuarios.SelectedRows.Count > 0)
-            {
-                editar = true;
-                txtId.Text = dtgUsuarios.CurrentRow.Cells[0].Value.ToString();
-                txtEmail.Text = dtgUsuarios.CurrentRow.Cells[1].Value.ToString();
-                txtPass.Text = dtgUsuarios.CurrentRow.Cells[2].Value.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Selecciona una fila", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void Buscar()
+        private void load()
         {
             dtgUsuarios.Rows.Clear();
-            using (sistema_ventasEntities bd = new sistema_ventasEntities())
+            using (sistema_ventasEntities db = new sistema_ventasEntities())
             {
-                var consulta = (from usuario in bd.tb_usuario
-                                where usuario.email.Contains(txtBuscar.Text)
-                                select new
-                                {
-                                    usuario.iDUsuario,
-                                    usuario.email,
-                                    usuario.contrasena,
-                                }).ToList();
-
+                var consulta = (from a in db.tb_usuario
+                                select a).ToList();
                 foreach (var i in consulta)
                 {
-                    dtgUsuarios.Rows.Add(i.iDUsuario, i.email, i.contrasena);
+                    dtgUsuarios.Rows.Add(i.iDUsuario,i.email,i.contrasena);
                 }
             }
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void dtgUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Buscar();
-        }
-
-        private void txtBuscar_Enter(object sender, EventArgs e)
-        {
-            if (txtBuscar.Text.Equals(@"Buscar"))
-            {
-                txtBuscar.Text = @"";
-            }
-        }
-
-        private void txtBuscar_Leave(object sender, EventArgs e)
-        {
-            if (txtBuscar.Text.Equals(""))
-            {
-                txtBuscar.Text = "Buscar";
-            }
+            correoS = dtgUsuarios.CurrentRow.Cells[1].Value.ToString();
         }
     }
 }

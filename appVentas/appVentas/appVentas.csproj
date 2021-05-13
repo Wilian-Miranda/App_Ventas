@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AE60A3C1-6C07-47C6-8095-7EB4D95192E2}</ProjectGuid>
+    <ProjectGuid>{274C6F41-A6D3-4152-9FDA-6605AF7C07FA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>appVentas</RootNamespace>
-    <AssemblyName>appVentas</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <RootNamespace>AppVentas</RootNamespace>
+    <AssemblyName>AppVentas</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -33,20 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -60,129 +55,109 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\ClsClientes.cs" />
-    <Compile Include="DAO\ClsDocumentos.cs" />
-    <Compile Include="DAO\ClsLoguin.cs" />
-    <Compile Include="DAO\ClsProductos.cs" />
-    <Compile Include="DAO\ClsRegistro.cs" />
-    <Compile Include="DAO\ClsUsuarios.cs" />
-    <Compile Include="sistema_ventasDataSet.Designer.cs">
+    <Compile Include="DAO\ClsAcceso.cs" />
+    <Compile Include="DAO\ClsDClientes.cs" />
+    <Compile Include="DAO\ClsDDocumentos.cs" />
+    <Compile Include="DAO\ClsDProductos.cs" />
+    <Compile Include="DAO\ClsDRegistroUsuario.cs" />
+    <Compile Include="DAO\ClsDUsuarios.cs" />
+    <Compile Include="VISTA\FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmUsuarios.Designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmClientes.Designer.cs">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmDocumentos.Designer.cs">
+      <DependentUpon>FrmDocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MODELO\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>sistema_ventasDataSet.xsd</DependentUpon>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Vista\frmClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\frmClientes.Designer.cs">
-      <DependentUpon>frmClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\frmDefault.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\frmDefault.Designer.cs">
-      <DependentUpon>frmDefault.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\frmDocumentos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\frmDocumentos.Designer.cs">
-      <DependentUpon>frmDocumentos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\frmInicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\frmInicio.Designer.cs">
-      <DependentUpon>frmInicio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\frmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Model\sistemaventa.Context.cs">
+    <Compile Include="MODELO\Model1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>sistemaventa.Context.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\sistemaventa.cs">
+    <Compile Include="MODELO\Model1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>sistemaventa.tt</DependentUpon>
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Model\sistemaventa.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>sistemaventa.edmx</DependentUpon>
+    <Compile Include="MODELO\sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\sysdiagrams.cs">
-      <DependentUpon>sistemaventa.tt</DependentUpon>
+    <Compile Include="MODELO\tb_cliente.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\tb_cliente.cs">
-      <DependentUpon>sistemaventa.tt</DependentUpon>
+    <Compile Include="MODELO\tb_detalleVenta.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\tb_detalleVenta.cs">
-      <DependentUpon>sistemaventa.tt</DependentUpon>
+    <Compile Include="MODELO\tb_documento.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\tb_documento.cs">
-      <DependentUpon>sistemaventa.tt</DependentUpon>
+    <Compile Include="MODELO\tb_producto.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\tb_producto.cs">
-      <DependentUpon>sistemaventa.tt</DependentUpon>
+    <Compile Include="MODELO\tb_usuario.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\tb_usuario.cs">
-      <DependentUpon>sistemaventa.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\tb_venta.cs">
-      <DependentUpon>sistemaventa.tt</DependentUpon>
+    <Compile Include="MODELO\tb_venta.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vista\frmProductos.cs">
+    <Compile Include="VISTA\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\frmProductos.Designer.cs">
-      <DependentUpon>frmProductos.cs</DependentUpon>
+    <Compile Include="VISTA\FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\frmRegister.cs">
+    <Compile Include="VISTA\FrmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\frmRegister.Designer.cs">
-      <DependentUpon>frmRegister.cs</DependentUpon>
+    <Compile Include="VISTA\FrmProductos.Designer.cs">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\frmSplash.cs">
+    <Compile Include="VISTA\FrmRegistroUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\frmSplash.Designer.cs">
-      <DependentUpon>frmSplash.cs</DependentUpon>
+    <Compile Include="VISTA\FrmRegistroUsuario.Designer.cs">
+      <DependentUpon>FrmRegistroUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\frmUsuarios.cs">
+    <Compile Include="VISTA\FrmVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\frmUsuarios.Designer.cs">
-      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    <Compile Include="VISTA\FrmVenta.Designer.cs">
+      <DependentUpon>FrmVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\frmVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\frmVenta.Designer.cs">
-      <DependentUpon>frmVenta.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Vista\frmClientes.resx">
-      <DependentUpon>frmClientes.cs</DependentUpon>
+    <EmbeddedResource Include="VISTA\FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmDefault.resx">
-      <DependentUpon>frmDefault.cs</DependentUpon>
+    <EmbeddedResource Include="VISTA\FrmClientes.resx">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmDocumentos.resx">
-      <DependentUpon>frmDocumentos.cs</DependentUpon>
+    <EmbeddedResource Include="VISTA\FrmDocumentos.resx">
+      <DependentUpon>FrmDocumentos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmInicio.resx">
-      <DependentUpon>frmInicio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="VISTA\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -194,27 +169,24 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Vista\frmProductos.resx">
-      <DependentUpon>frmProductos.cs</DependentUpon>
+    <EmbeddedResource Include="VISTA\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmRegister.resx">
-      <DependentUpon>frmRegister.cs</DependentUpon>
+    <EmbeddedResource Include="VISTA\FrmProductos.resx">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmSplash.resx">
-      <DependentUpon>frmSplash.cs</DependentUpon>
+    <EmbeddedResource Include="VISTA\FrmRegistroUsuario.resx">
+      <DependentUpon>FrmRegistroUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmUsuarios.resx">
-      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="VISTA\FrmVenta.resx">
+      <DependentUpon>FrmVenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmVenta.resx">
-      <DependentUpon>frmVenta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EntityDeploy Include="Model\sistemaventa.edmx">
+    <EntityDeploy Include="MODELO\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>sistemaventa.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\sistemaventa.edmx.diagram">
-      <DependentUpon>sistemaventa.edmx</DependentUpon>
+    <None Include="MODELO\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -226,69 +198,38 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="sistema_ventasDataSet.xsc">
-      <DependentUpon>sistema_ventasDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="sistema_ventasDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>sistema_ventasDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="sistema_ventasDataSet.xss">
-      <DependentUpon>sistema_ventasDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\sistemaventa.Context.tt">
+    <Content Include="MODELO\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>sistemaventa.Context.cs</LastGenOutput>
-      <DependentUpon>sistemaventa.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
-    <Content Include="Model\sistemaventa.tt">
+    <Content Include="MODELO\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>sistemaventa.edmx</DependentUpon>
-      <LastGenOutput>sistemaventa.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\logo.png" />
-    <None Include="Resources\article.png" />
-    <None Include="Resources\plus %282%29.png" />
-    <None Include="Resources\remove.png" />
-    <None Include="Resources\search %281%29.png" />
-    <None Include="Resources\search.png" />
-    <None Include="Resources\carritoCompra.png" />
-    <None Include="Resources\carrito.png" />
-    <None Include="Resources\cart.png" />
-    <None Include="Resources\basura.png" />
-    <None Include="Resources\disco-flexible.png" />
-    <None Include="Resources\video-chat.png" />
-    <None Include="Resources\edit.png" />
-    <None Include="Resources\group.png" />
-    <None Include="Resources\shopping-cart.png" />
-    <None Include="Resources\dentro.png" />
-    <None Include="Resources\fuera.png" />
-    <None Include="Resources\id-card.png" />
-    <None Include="Resources\usuario1.png" />
-    <None Include="Resources\agregar-usuario.png" />
-    <None Include="Resources\participacion.png" />
-    <None Include="Resources\cerrar %281%29.png" />
-    <None Include="Resources\menos %281%29.png" />
-    <None Include="Resources\cerrar.png" />
-    <None Include="Resources\minimizar %281%29.png" />
-    <None Include="Resources\minimizar.png" />
-    <None Include="Resources\menos.png" />
-    <None Include="Resources\eliminar %281%29.png" />
-    <None Include="Resources\enter.png" />
-    <None Include="Resources\user %281%29.png" />
-    <None Include="Resources\user %282%29.png" />
-    <None Include="Resources\user.png" />
+    <None Include="Resources\caja-registradora.png" />
+    <None Include="Resources\tarjeta-de-identificacion.png" />
+    <None Include="Resources\archivo.png" />
+    <None Include="Resources\calculadora.png" />
+    <None Include="Resources\estar.png" />
+    <None Include="Resources\opinion-del-cliente1.png" />
+    <None Include="Resources\opinion-del-cliente.png" />
+    <None Include="Resources\tiendas.png" />
+    <None Include="Resources\appVentasggg.png" />
+    <None Include="Resources\aprobar.png" />
+    <None Include="Resources\document.png" />
+    <None Include="Resources\producto.png" />
+    <None Include="Resources\trabajo-en-equipo.png" />
     <None Include="Resources\usuario.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

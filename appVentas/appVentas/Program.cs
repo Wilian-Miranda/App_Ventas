@@ -1,11 +1,11 @@
-﻿using appVentas.Vista;
+﻿using AppVentas.VISTA;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace appVentas
+namespace AppVentas
 {
     static class Program
     {
@@ -17,7 +17,7 @@ namespace appVentas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmSplash());
+            Application.Run(new FrmPrincipal());
         }
     }
 }

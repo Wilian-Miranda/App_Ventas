@@ -1,6 +1,4 @@
-﻿using appVentas.DAO;
-using appVentas.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,163 +7,178 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppVentas.MODELO;
+using AppVentas.DAO;
 
-namespace appVentas.Vista
+namespace AppVentas.VISTA
 {
-    public partial class frmClientes : Form
+    public partial class FrmClientes : Form
     {
-        ClsClientes clientes = new ClsClientes();
-        private bool editar = false;
-        public frmClientes()
+        public FrmClientes()
         {
             InitializeComponent();
-            Clean();
-            Cargar();
+            load();
         }
 
-        private void Clean()
+        private void label3_Click(object sender, EventArgs e)
         {
-            txtId.Text = "";
-            txtNombre.Text = "";
-            txtDireccion.Text = "";
-            txtDui.Text = "";
+
         }
-        private void Cargar()
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void load()
         {
             dtgClientes.Rows.Clear();
-            List<tb_cliente> Lista = clientes.CargarClientes();
-
-            foreach (var iteracion in Lista)
+            using (sistema_ventasEntities db= new sistema_ventasEntities())
             {
-                dtgClientes.Rows.Add(iteracion.iDCliente, iteracion.nombreCliente, iteracion.direccionCliente, iteracion.duiCliente);
+                var consulta = ( from a in db.tb_cliente
+                                 select a
+                    ).ToList();
+
+                foreach (var i in consulta)
+                {
+                    dtgClientes.Rows.Add(i.iDCliente,i.nombreCliente,i.direccionCliente,i.duiCliente);
+                }
             }
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
-            tb_cliente guardarCliente = new tb_cliente();
-            if (editar == false)
+            if ((txtNombre.Text==""&&txtDUI.Text=="")&&txtDireccion.Text=="")
             {
-                try
-                {
-                    if (txtId.Text == "")
-                    {
-                        guardarCliente.nombreCliente = txtNombre.Text;
-                        guardarCliente.direccionCliente = txtDireccion.Text;
-                        guardarCliente.duiCliente = txtDui.Text;
-
-                        clientes.GuardarCliente(guardarCliente);
-                        Cargar();
-                        Clean();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Ha ocurrido un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show("¡Datos incompletos: los campos de Nombre, DUI y Dirección son obligatorios!");
             }
-
             else
             {
-                try
+                ClsDClientes clsDClientes = new ClsDClientes();
+                using (sistema_ventasEntities db = new sistema_ventasEntities())
                 {
-                    guardarCliente.iDCliente = Convert.ToInt32(txtId.Text);
-                    guardarCliente.nombreCliente = txtNombre.Text;
-                    guardarCliente.direccionCliente = txtDireccion.Text;
-                    guardarCliente.duiCliente = txtDui.Text;
-
-                    clientes.ActualizarCliente(guardarCliente);
-
-                    Cargar();
-                    Clean();
+                    tb_cliente cliente = new tb_cliente();
+                    cliente.nombreCliente = txtNombre.Text;
+                    cliente.direccionCliente = txtDireccion.Text;
+                    cliente.duiCliente = txtDUI.Text;
+                    clsDClientes.GuardarCliente(cliente);
+                    load();
+                    limpiar();
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Ha ocurrido un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (dtgClientes.SelectedRows.Count > 0)
-                {
-                    txtId.Text = dtgClientes.CurrentRow.Cells[0].Value.ToString();
-                    clientes.EliminarCliente(Convert.ToInt32(txtId.Text));
-
-                    Cargar();
-                    Clean();
-                }
-                else
-                {
-                    MessageBox.Show("Selecciona una fila", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ha ocurrido un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            if (dtgClientes.SelectedRows.Count > 0)
+            ClsDClientes clsDClientes = new ClsDClientes();
+            using (sistema_ventasEntities db = new sistema_ventasEntities())
             {
-                editar = true;
-                txtId.Text = dtgClientes.CurrentRow.Cells[0].Value.ToString();
-                txtNombre.Text = dtgClientes.CurrentRow.Cells[1].Value.ToString();
-                txtDireccion.Text = dtgClientes.CurrentRow.Cells[2].Value.ToString();
-                txtDui.Text = dtgClientes.CurrentRow.Cells[3].Value.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Selecciona una fila", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void Buscar()
-        {
-            dtgClientes.Rows.Clear();
-            using (sistema_ventasEntities bd = new sistema_ventasEntities())
-            {
-                var consulta = (from cliente in bd.tb_cliente
-                                where cliente.nombreCliente.Contains(txtBuscar.Text)
-                                select new
-                                {
-                                    cliente.iDCliente,
-                                    cliente.nombreCliente,
-                                    cliente.direccionCliente,
-                                    cliente.duiCliente
-                                }).ToList();
-
-                foreach (var i in consulta)
-                {
-                    dtgClientes.Rows.Add(i.iDCliente, i.nombreCliente, i.direccionCliente, i.duiCliente);
-                }
+                tb_cliente cliente = new tb_cliente();
+                cliente.nombreCliente = txtNombre.Text;
+                cliente.direccionCliente = txtDireccion.Text;
+                cliente.duiCliente = txtDUI.Text;
+                cliente.iDCliente = Convert.ToInt32(dtgClientes.CurrentRow.Cells[0].Value.ToString());
+                clsDClientes.ActualizarCliente(cliente);
+                load();
+                limpiar();
             }
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
-            Buscar();
+            ClsDClientes clientes = new ClsDClientes();
+            clientes.BorrarCliente(Convert.ToInt32(dtgClientes.CurrentRow.Cells[0].Value.ToString()));
+            load();
+            limpiar();
+
+
         }
 
-        private void txtBuscar_Enter(object sender, EventArgs e)
+        private void limpiar()
         {
-            if (txtBuscar.Text.Equals(@"Buscar"))
-            {
-                txtBuscar.Text = @"";
-            }
+            txtNombre.Clear();
+            txtDireccion.Clear();
+            txtDUI.Clear();
         }
 
-        private void txtBuscar_Leave(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            if (txtBuscar.Text.Equals(""))
-            {
-                txtBuscar.Text = "Buscar";
-            }
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtDUI_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dtgClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string nombre = dtgClientes.CurrentRow.Cells[1].Value.ToString();
+            string direccion = dtgClientes.CurrentRow.Cells[2].Value.ToString();
+            string dui = dtgClientes.CurrentRow.Cells[3].Value.ToString();
+
+            txtNombre.Text = nombre;
+            txtDireccion.Text = direccion;
+            txtDUI.Text = dui;
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            limpiar();
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
