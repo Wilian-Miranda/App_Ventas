@@ -52,7 +52,7 @@ namespace AppVentas.VISTA
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if ((txtNombre.Text==""&&txtDUI.Text=="")&&txtDireccion.Text=="")
+            if ((txtNombre.Text==""||txtDUI.Text=="")||txtDireccion.Text=="")
             {
                 MessageBox.Show("¡Datos incompletos: los campos de Nombre, DUI y Dirección son obligatorios!");
             }
@@ -74,19 +74,26 @@ namespace AppVentas.VISTA
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            ClsDClientes clsDClientes = new ClsDClientes();
-            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            if ((txtNombre.Text == "" || txtDUI.Text == "") || txtDireccion.Text == "")
             {
-                tb_cliente cliente = new tb_cliente();
-                cliente.nombreCliente = txtNombre.Text;
-                cliente.direccionCliente = txtDireccion.Text;
-                cliente.duiCliente = txtDUI.Text;
-                cliente.iDCliente = Convert.ToInt32(dtgClientes.CurrentRow.Cells[0].Value.ToString());
-                clsDClientes.ActualizarCliente(cliente);
-                load();
-                limpiar();
+                MessageBox.Show("¡Datos incompletos: los campos de Nombre, DUI y Dirección son obligatorios!");
+            }
+            else
+            {
+                ClsDClientes clsDClientes = new ClsDClientes();
+                using (sistema_ventasEntities db = new sistema_ventasEntities())
+                {
+                    tb_cliente cliente = new tb_cliente();
+                    cliente.nombreCliente = txtNombre.Text;
+                    cliente.direccionCliente = txtDireccion.Text;
+                    cliente.duiCliente = txtDUI.Text;
+                    cliente.iDCliente = Convert.ToInt32(dtgClientes.CurrentRow.Cells[0].Value.ToString());
+                    clsDClientes.ActualizarCliente(cliente);
+                    load();
+                }
             }
         }
+        
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -179,6 +186,22 @@ namespace AppVentas.VISTA
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnLimpiar_Click_1(object sender, EventArgs e)
+        {
+            limpiar();
+        }
+
+        private void dtgClientes_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            String nombre = dtgClientes.CurrentRow.Cells[1].Value.ToString();
+            String dirrecion = dtgClientes.CurrentRow.Cells[2].Value.ToString();
+            String DUI = dtgClientes.CurrentRow.Cells[2].Value.ToString();
+
+            txtNombre.Text = nombre;
+            txtDireccion.Text = dirrecion;
+            txtDUI.Text = DUI;
         }
     }
 }

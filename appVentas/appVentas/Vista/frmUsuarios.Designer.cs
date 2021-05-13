@@ -29,11 +29,13 @@ namespace AppVentas.VISTA
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.dtgUsuarios = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
@@ -48,124 +50,161 @@ namespace AppVentas.VISTA
             this.txtPassAntigua = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgUsuarios)).BeginInit();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgUsuarios)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel8);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(10, 235);
+            this.panel4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(3);
+            this.panel4.Size = new System.Drawing.Size(608, 322);
+            this.panel4.TabIndex = 7;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Wheat;
+            this.panel8.Controls.Add(this.dtgUsuarios);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(3, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Padding = new System.Windows.Forms.Padding(10);
+            this.panel8.Size = new System.Drawing.Size(602, 316);
+            this.panel8.TabIndex = 0;
             // 
             // dtgUsuarios
             // 
             this.dtgUsuarios.AllowUserToAddRows = false;
             this.dtgUsuarios.AllowUserToDeleteRows = false;
             this.dtgUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgUsuarios.BackgroundColor = System.Drawing.Color.White;
             this.dtgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
             this.dtgUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgUsuarios.Location = new System.Drawing.Point(20, 20);
+            this.dtgUsuarios.Location = new System.Drawing.Point(10, 10);
+            this.dtgUsuarios.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.dtgUsuarios.Name = "dtgUsuarios";
             this.dtgUsuarios.ReadOnly = true;
+            this.dtgUsuarios.RowHeadersVisible = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Orchid;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgUsuarios.Size = new System.Drawing.Size(602, 281);
-            this.dtgUsuarios.TabIndex = 0;
+            this.dtgUsuarios.Size = new System.Drawing.Size(582, 296);
+            this.dtgUsuarios.TabIndex = 1;
             this.dtgUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsuarios_CellClick);
             // 
             // Column1
             // 
-            this.Column1.FillWeight = 76.14214F;
+            this.Column1.FillWeight = 59.16947F;
             this.Column1.HeaderText = "Código";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
-            this.Column2.FillWeight = 111.9289F;
+            this.Column2.FillWeight = 164.6884F;
             this.Column2.HeaderText = "E-mail";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
-            this.Column3.FillWeight = 111.9289F;
+            this.Column3.FillWeight = 76.14212F;
             this.Column3.HeaderText = "Contraseña";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.dtgUsuarios);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 197);
-            this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(20);
-            this.panel4.Size = new System.Drawing.Size(642, 321);
-            this.panel4.TabIndex = 7;
-            // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(89, 57);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
+            this.txtPass.Location = new System.Drawing.Point(124, 38);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(5, 4, 5, 29);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(324, 20);
+            this.txtPass.Size = new System.Drawing.Size(285, 26);
             this.txtPass.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 60);
+            this.label3.Location = new System.Drawing.Point(8, 43);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
+            this.label3.Size = new System.Drawing.Size(104, 19);
             this.label3.TabIndex = 4;
             this.label3.Text = "Contraseña:";
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(89, 18);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
+            this.txtCorreo.ForeColor = System.Drawing.Color.Black;
+            this.txtCorreo.Location = new System.Drawing.Point(124, 6);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(5, 4, 5, 29);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(324, 20);
+            this.txtCorreo.Size = new System.Drawing.Size(285, 26);
             this.txtCorreo.TabIndex = 3;
             // 
             // btnActualizar
             // 
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(187)))), ((int)(((byte)(132)))));
             this.btnActualizar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnActualizar.Location = new System.Drawing.Point(0, 70);
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(10, 70);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(93, 50);
+            this.btnActualizar.Size = new System.Drawing.Size(109, 50);
             this.btnActualizar.TabIndex = 1;
             this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnAgregar
             // 
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(187)))), ((int)(((byte)(132)))));
             this.btnAgregar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAgregar.Location = new System.Drawing.Point(0, 20);
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(10, 20);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(93, 50);
+            this.btnAgregar.Size = new System.Drawing.Size(109, 50);
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 21);
+            this.label2.Location = new System.Drawing.Point(8, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(62, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "E-mail:";
             // 
@@ -175,21 +214,26 @@ namespace AppVentas.VISTA
             this.panel3.Controls.Add(this.btnActualizar);
             this.panel3.Controls.Add(this.btnAgregar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(642, 197);
+            this.panel3.Location = new System.Drawing.Point(618, 235);
+            this.panel3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(0, 20, 10, 0);
-            this.panel3.Size = new System.Drawing.Size(103, 321);
+            this.panel3.Padding = new System.Windows.Forms.Padding(10, 20, 20, 0);
+            this.panel3.Size = new System.Drawing.Size(139, 322);
             this.panel3.TabIndex = 6;
             // 
             // btnEliminar
             // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(187)))), ((int)(((byte)(132)))));
             this.btnEliminar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEliminar.Location = new System.Drawing.Point(0, 120);
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(10, 120);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(93, 50);
+            this.btnEliminar.Size = new System.Drawing.Size(109, 50);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // panel5
@@ -202,17 +246,20 @@ namespace AppVentas.VISTA
             this.panel5.Controls.Add(this.txtCorreo);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(194, 0);
+            this.panel5.Location = new System.Drawing.Point(185, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(448, 151);
+            this.panel5.Size = new System.Drawing.Size(420, 158);
             this.panel5.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 97);
+            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(5, 87);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(326, 13);
+            this.label5.Size = new System.Drawing.Size(388, 15);
             this.label5.TabIndex = 8;
             this.label5.Text = "Ingrese su antigua contraseña para modificar y eliminar los registros:";
             // 
@@ -222,59 +269,69 @@ namespace AppVentas.VISTA
             this.panel6.Controls.Add(this.txtPassAntigua);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 98);
+            this.panel6.Location = new System.Drawing.Point(0, 97);
+            this.panel6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(446, 51);
+            this.panel6.Size = new System.Drawing.Size(418, 59);
             this.panel6.TabIndex = 6;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // txtPassAntigua
             // 
-            this.txtPassAntigua.Location = new System.Drawing.Point(88, 17);
-            this.txtPassAntigua.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
+            this.txtPassAntigua.Location = new System.Drawing.Point(123, 20);
+            this.txtPassAntigua.Margin = new System.Windows.Forms.Padding(5, 4, 5, 29);
             this.txtPassAntigua.Name = "txtPassAntigua";
             this.txtPassAntigua.PasswordChar = '*';
-            this.txtPassAntigua.Size = new System.Drawing.Size(324, 20);
+            this.txtPassAntigua.Size = new System.Drawing.Size(285, 26);
             this.txtPassAntigua.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 20);
+            this.label4.Location = new System.Drawing.Point(6, 24);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 13);
+            this.label4.Size = new System.Drawing.Size(104, 19);
             this.label4.TabIndex = 6;
             this.label4.Text = "Contraseña:";
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnLimpiar);
+            this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 46);
+            this.panel2.Location = new System.Drawing.Point(10, 77);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.panel2.Size = new System.Drawing.Size(745, 151);
+            this.panel2.Size = new System.Drawing.Size(747, 158);
             this.panel2.TabIndex = 5;
             // 
-            // label1
+            // panel7
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(305, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "GESTIÓN DE USUARIOS";
+            this.panel7.Controls.Add(this.btnLimpiar);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(605, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Padding = new System.Windows.Forms.Padding(13, 0, 20, 0);
+            this.panel7.Size = new System.Drawing.Size(142, 158);
+            this.panel7.TabIndex = 2;
             // 
-            // panel1
+            // btnLimpiar
             // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(745, 46);
-            this.panel1.TabIndex = 4;
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(187)))), ((int)(((byte)(132)))));
+            this.btnLimpiar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.Location = new System.Drawing.Point(13, 0);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Padding = new System.Windows.Forms.Padding(0, 0, 17, 0);
+            this.btnLimpiar.Size = new System.Drawing.Size(109, 50);
+            this.btnLimpiar.TabIndex = 3;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // pictureBox1
             // 
@@ -282,52 +339,79 @@ namespace AppVentas.VISTA
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(20);
-            this.pictureBox1.Size = new System.Drawing.Size(194, 151);
+            this.pictureBox1.Size = new System.Drawing.Size(185, 158);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnLimpiar
+            // label1
             // 
-            this.btnLimpiar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLimpiar.Location = new System.Drawing.Point(642, 0);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btnLimpiar.Size = new System.Drawing.Size(93, 23);
-            this.btnLimpiar.TabIndex = 2;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(259, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(197, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "GESTIÓN DE USUARIOS";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel9);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(10, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(10);
+            this.panel1.Size = new System.Drawing.Size(747, 67);
+            this.panel1.TabIndex = 4;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Wheat;
+            this.panel9.Controls.Add(this.label1);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(10, 10);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(727, 47);
+            this.panel9.TabIndex = 1;
             // 
             // FrmUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(745, 518);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(767, 567);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FrmUsuarios";
+            this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "ClsDUsuarios";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgUsuarios)).EndInit();
             this.panel4.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgUsuarios)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dtgUsuarios;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label3;
@@ -346,9 +430,13 @@ namespace AppVentas.VISTA
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtPassAntigua;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.DataGridView dtgUsuarios;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Panel panel9;
     }
 }

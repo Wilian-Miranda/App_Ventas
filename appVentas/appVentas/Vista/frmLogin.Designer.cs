@@ -36,56 +36,69 @@ namespace AppVentas
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnRegistroUsuario = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(84, 62);
+            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUser.Location = new System.Drawing.Point(136, 99);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(289, 20);
+            this.txtUser.Size = new System.Drawing.Size(388, 26);
             this.txtUser.TabIndex = 0;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(84, 95);
+            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPass.Location = new System.Drawing.Point(136, 147);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(289, 20);
+            this.txtPass.Size = new System.Drawing.Size(388, 26);
             this.txtPass.TabIndex = 1;
             // 
             // btbIniciarSecion
             // 
-            this.btbIniciarSecion.Location = new System.Drawing.Point(84, 130);
+            this.btbIniciarSecion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(187)))), ((int)(((byte)(132)))));
+            this.btbIniciarSecion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btbIniciarSecion.Location = new System.Drawing.Point(23, 198);
+            this.btbIniciarSecion.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btbIniciarSecion.Name = "btbIniciarSecion";
-            this.btbIniciarSecion.Size = new System.Drawing.Size(289, 23);
+            this.btbIniciarSecion.Size = new System.Drawing.Size(501, 34);
             this.btbIniciarSecion.TabIndex = 2;
             this.btbIniciarSecion.Text = "Iniciar Sesión";
-            this.btbIniciarSecion.UseVisualStyleBackColor = true;
+            this.btbIniciarSecion.UseVisualStyleBackColor = false;
             this.btbIniciarSecion.Click += new System.EventHandler(this.btbIniciarSecion_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 62);
+            this.label1.Location = new System.Drawing.Point(46, 99);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.Size = new System.Drawing.Size(75, 19);
             this.label1.TabIndex = 3;
             this.label1.Text = "Usuario:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 98);
+            this.label2.Location = new System.Drawing.Point(19, 151);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.Size = new System.Drawing.Size(104, 19);
             this.label2.TabIndex = 4;
             this.label2.Text = "Contraseña:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(191, 20);
+            this.label3.Location = new System.Drawing.Point(254, 19);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.Size = new System.Drawing.Size(59, 19);
             this.label3.TabIndex = 5;
             this.label3.Text = "LOGIN";
             // 
@@ -94,29 +107,55 @@ namespace AppVentas
             this.btnRegistroUsuario.FlatAppearance.BorderSize = 0;
             this.btnRegistroUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistroUsuario.ForeColor = System.Drawing.Color.Blue;
-            this.btnRegistroUsuario.Location = new System.Drawing.Point(84, 159);
+            this.btnRegistroUsuario.Location = new System.Drawing.Point(32, 240);
+            this.btnRegistroUsuario.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnRegistroUsuario.Name = "btnRegistroUsuario";
-            this.btnRegistroUsuario.Size = new System.Drawing.Size(289, 23);
+            this.btnRegistroUsuario.Size = new System.Drawing.Size(482, 34);
             this.btnRegistroUsuario.TabIndex = 3;
             this.btnRegistroUsuario.Text = "¿No tienes una cuenta?Regístrate";
             this.btnRegistroUsuario.UseVisualStyleBackColor = true;
             this.btnRegistroUsuario.Click += new System.EventHandler(this.button1_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Sienna;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(547, 30);
+            this.panel1.TabIndex = 6;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Wheat;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 30);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(547, 54);
+            this.panel2.TabIndex = 7;
+            // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(415, 208);
+            this.BackColor = System.Drawing.Color.Wheat;
+            this.ClientSize = new System.Drawing.Size(547, 289);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnRegistroUsuario);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btbIniciarSecion);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUser);
+            this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,6 +170,8 @@ namespace AppVentas
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnRegistroUsuario;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

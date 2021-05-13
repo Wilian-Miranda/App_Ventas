@@ -47,7 +47,9 @@ namespace AppVentas
         private void button1_Click(object sender, EventArgs e)
         {
             FrmRegistroUsuario registroUsuario = new FrmRegistroUsuario();
+            this.Visible = false;
             registroUsuario.ShowDialog();
+
         }
     }
 }

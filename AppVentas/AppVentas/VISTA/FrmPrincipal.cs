@@ -26,14 +26,15 @@ namespace AppVentas.VISTA
             {
                 //RETORNANDO A LAS CONFIGURACIONES POR DEFECTO
                 //retornando el color por defecto del boton
-                btnEnUso.BackColor = Color.FromArgb(15, 159, 191);
+                btnEnUso.BackColor = Color.Sienna;
                 //Aliniando el texto al centro
                 btnEnUso.TextAlign = ContentAlignment.MiddleCenter;
                 //cambiado relacion de texto a imagen antes de texto
                 btnEnUso.TextImageRelation = TextImageRelation.ImageBeforeText;
                 //Aliniando el icono a la izquierda
                 btnEnUso.ImageAlign = ContentAlignment.MiddleCenter;
-                btnEnUso.FlatAppearance.BorderSize = 0;
+                btnEnUso.FlatAppearance.BorderSize = 3;
+                btnEnUso.ForeColor = Color.FromArgb(217, 187, 132);
             }
         }
 
@@ -50,7 +51,7 @@ namespace AppVentas.VISTA
                 //BOTÓN
                 btnEnUso = (Button)btnActivo;
                 //cambiando el color de fondo del color
-                btnEnUso.BackColor = Color.FromArgb(242, 208, 107);
+                btnEnUso.BackColor = Color.FromArgb(217, 187, 132);
                 //Aliniando el texto al centro
                 btnEnUso.TextAlign = ContentAlignment.MiddleCenter;
                 //cambiado relacion de texto a texto antes de imagen
@@ -58,6 +59,7 @@ namespace AppVentas.VISTA
                 //Aliniando el icono a la derecha
                 btnEnUso.ImageAlign = ContentAlignment.MiddleRight;
                 btnEnUso.FlatAppearance.BorderSize = 3;
+                btnEnUso.ForeColor = Color.Sienna;
 
 
                 ////BORDE IZQUIERDO DEL BOTON
@@ -128,6 +130,7 @@ namespace AppVentas.VISTA
             if (formulario != null)
             {
                 formulario.Close();
+                DesactivarResaltado();
             }
         }
 
@@ -157,7 +160,7 @@ namespace AppVentas.VISTA
 
         private void btnActividad_Click(object sender, EventArgs e)
         {
-            //AbrirFormEnPanel<FrmClientes>();
+            AbrirFormEnPanel<FrmActividad>();
             BotonActivo(btnActividad);
         }
 
@@ -167,6 +170,11 @@ namespace AppVentas.VISTA
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

@@ -61,6 +61,12 @@
     <Compile Include="DAO\ClsDProductos.cs" />
     <Compile Include="DAO\ClsDRegistroUsuario.cs" />
     <Compile Include="DAO\ClsDUsuarios.cs" />
+    <Compile Include="VISTA\FrmActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmActividad.Designer.cs">
+      <DependentUpon>FrmActividad.cs</DependentUpon>
+    </Compile>
     <Compile Include="VISTA\FrmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     <Compile Include="VISTA\FrmVenta.Designer.cs">
       <DependentUpon>FrmVenta.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VISTA\FrmActividad.resx">
+      <DependentUpon>FrmActividad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>

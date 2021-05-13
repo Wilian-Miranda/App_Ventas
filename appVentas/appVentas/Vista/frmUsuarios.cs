@@ -49,6 +49,7 @@ namespace AppVentas.VISTA
                         usuario.contrasena = txtPass.Text;
                         Vusuarios.GuardarUsuario(usuario);
                         load();
+                        Limpiar();
                     }
                 }
             }
@@ -94,6 +95,7 @@ namespace AppVentas.VISTA
                 ClsDUsuarios Vusuario = new ClsDUsuarios();
                 Vusuario.EliminarUsuario(Convert.ToInt32(dtgUsuarios.CurrentRow.Cells[0].Value.ToString()));
                 load();
+                Limpiar();
             }
         }
 
@@ -114,6 +116,23 @@ namespace AppVentas.VISTA
         private void dtgUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             correoS = dtgUsuarios.CurrentRow.Cells[1].Value.ToString();
+            string correo = dtgUsuarios.CurrentRow.Cells[1].Value.ToString();
+
+            txtCorreo.Text = correo;
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+        private void Limpiar()
+        {
+            txtCorreo.Clear();
+            txtPass.Clear();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
         }
     }
 }

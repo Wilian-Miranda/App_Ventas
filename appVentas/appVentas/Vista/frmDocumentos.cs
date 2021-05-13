@@ -27,28 +27,43 @@ namespace AppVentas.VISTA
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            if (txtDocumento.Text =="")
             {
-                ClsDDocumentos VDocumentos = new ClsDDocumentos();
-                tb_documento Documento = new tb_documento();
-                Documento.nombreDocumento = txtDocumento.Text;
-                VDocumentos.GuardarDocumento(Documento);
-                load();
+                MessageBox.Show("Los datos están incompletos");
+            }
+            else
+            {
+                using (sistema_ventasEntities db = new sistema_ventasEntities())
+                {
+                    ClsDDocumentos VDocumentos = new ClsDDocumentos();
+                    tb_documento Documento = new tb_documento();
+                    Documento.nombreDocumento = txtDocumento.Text;
+                    VDocumentos.GuardarDocumento(Documento);
+                    load();
+                    Limpiar();
 
+                }
             }
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            if (txtDocumento.Text == "")
             {
-                ClsDDocumentos VDocumentos = new ClsDDocumentos();
-                tb_documento Documento = new tb_documento();
-                Documento.nombreDocumento = txtDocumento.Text;
-                Documento.iDDocumento = Convert.ToInt32(dtgDoc.CurrentRow.Cells[0].Value.ToString());
-                VDocumentos.ActualizarDocumento(Documento);
-                load();
+                MessageBox.Show("Los datos están incompletos");
+            }
+            else
+            {
+                using (sistema_ventasEntities db = new sistema_ventasEntities())
+                {
+                    ClsDDocumentos VDocumentos = new ClsDDocumentos();
+                    tb_documento Documento = new tb_documento();
+                    Documento.nombreDocumento = txtDocumento.Text;
+                    Documento.iDDocumento = Convert.ToInt32(dtgDoc.CurrentRow.Cells[0].Value.ToString());
+                    VDocumentos.ActualizarDocumento(Documento);
+                    load();
 
+                }
             }
         }
 
@@ -57,6 +72,7 @@ namespace AppVentas.VISTA
             ClsDDocumentos VDocumentos = new ClsDDocumentos();
             VDocumentos.EliminarDocumento(Convert.ToInt32(dtgDoc.CurrentRow.Cells[0].Value.ToString()));
             load();
+            Limpiar();
         }
 
         private void load()
@@ -72,6 +88,22 @@ namespace AppVentas.VISTA
                     dtgDoc.Rows.Add(i.iDDocumento,i.nombreDocumento);
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void Limpiar()
+        {
+            txtDocumento.Clear();
+        }
+
+        private void dtgDoc_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string doc = dtgDoc.CurrentRow.Cells[1].Value.ToString();
+            txtDocumento.Text = doc;
         }
     }
 }

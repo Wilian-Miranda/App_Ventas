@@ -42,3 +42,4 @@ C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\obj\Debug\AppVentas.csproj.
 C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\obj\Debug\AppVentas.csproj.CopyComplete
 C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\obj\Debug\AppVentas.exe
 C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\obj\Debug\AppVentas.pdb
+C:\Users\Jose\Desktop\App_Ventas\AppVentas\AppVentas\obj\Debug\AppVentas.VISTA.FrmActividad.resources

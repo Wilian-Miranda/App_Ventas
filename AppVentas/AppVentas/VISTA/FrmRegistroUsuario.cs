@@ -18,10 +18,12 @@ namespace AppVentas.VISTA
         {
             InitializeComponent();
         }
-
+        FrmLogin log = new FrmLogin();
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
+            log.Visible = true;
+
         }
 
         private void btnRegistrarse_Click(object sender, EventArgs e)
