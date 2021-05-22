@@ -53,7 +53,7 @@ namespace AppVentas.VISTA
             this.panel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(10);
-            this.panel1.Size = new System.Drawing.Size(731, 67);
+            this.panel1.Size = new System.Drawing.Size(844, 67);
             this.panel1.TabIndex = 5;
             // 
             // panel8
@@ -63,14 +63,14 @@ namespace AppVentas.VISTA
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(10, 10);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(711, 47);
+            this.panel8.Size = new System.Drawing.Size(824, 47);
             this.panel8.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(261, 14);
+            this.label1.Location = new System.Drawing.Point(318, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(170, 19);
@@ -84,7 +84,7 @@ namespace AppVentas.VISTA
             this.panel2.Location = new System.Drawing.Point(10, 77);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(3);
-            this.panel2.Size = new System.Drawing.Size(731, 441);
+            this.panel2.Size = new System.Drawing.Size(844, 536);
             this.panel2.TabIndex = 6;
             // 
             // panel3
@@ -95,7 +95,7 @@ namespace AppVentas.VISTA
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(10);
-            this.panel3.Size = new System.Drawing.Size(725, 435);
+            this.panel3.Size = new System.Drawing.Size(838, 530);
             this.panel3.TabIndex = 0;
             // 
             // dataGridView1
@@ -114,7 +114,7 @@ namespace AppVentas.VISTA
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(705, 415);
+            this.dataGridView1.Size = new System.Drawing.Size(818, 510);
             this.dataGridView1.TabIndex = 0;
             // 
             // Column1
@@ -135,7 +135,8 @@ namespace AppVentas.VISTA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 528);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(864, 623);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

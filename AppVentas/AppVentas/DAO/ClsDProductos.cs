@@ -71,5 +71,20 @@ namespace AppVentas.DAO
                 throw;
             }
         }
+
+        public List<tb_producto> CargarProductos(String filtro)
+        {
+            List<tb_producto> tb_Productos = new List<tb_producto>();
+            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            {
+
+                tb_Productos = (from a in db.tb_producto
+                               where a.nombreProducto.Contains(filtro)
+                               select a).ToList();
+            }
+
+            return tb_Productos;
+
+        }
     }
 }

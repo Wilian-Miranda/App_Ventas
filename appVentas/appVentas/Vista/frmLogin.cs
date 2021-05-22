@@ -34,6 +34,8 @@ namespace AppVentas
                 MessageBox.Show("Bienvenido");
                 FrmPrincipal principal = new FrmPrincipal();
                 this.Visible = false;
+                FrmPrincipal.FrVenta.dataGridView1.Rows.Clear();
+                FrmPrincipal.FrVenta.txtTotalFinal.Clear();
                 principal.Show();
                 
 
@@ -50,6 +52,39 @@ namespace AppVentas
             this.Visible = false;
             registroUsuario.ShowDialog();
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Minimized;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        int posX = 0;
+        int posY = 0;
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                posX = e.X;
+                posY = e.Y;
+            }
+            else
+            {
+                Left += (e.X - posX);
+                Top += (e.Y - posY);
+            }
         }
     }
 }

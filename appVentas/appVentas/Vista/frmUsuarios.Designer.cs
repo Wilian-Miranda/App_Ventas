@@ -29,7 +29,7 @@ namespace AppVentas.VISTA
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dtgUsuarios = new System.Windows.Forms.DataGridView();
@@ -77,7 +77,7 @@ namespace AppVentas.VISTA
             this.panel4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(3);
-            this.panel4.Size = new System.Drawing.Size(608, 322);
+            this.panel4.Size = new System.Drawing.Size(705, 378);
             this.panel4.TabIndex = 7;
             // 
             // panel8
@@ -88,7 +88,7 @@ namespace AppVentas.VISTA
             this.panel8.Location = new System.Drawing.Point(3, 3);
             this.panel8.Name = "panel8";
             this.panel8.Padding = new System.Windows.Forms.Padding(10);
-            this.panel8.Size = new System.Drawing.Size(602, 316);
+            this.panel8.Size = new System.Drawing.Size(699, 372);
             this.panel8.TabIndex = 0;
             // 
             // dtgUsuarios
@@ -108,14 +108,14 @@ namespace AppVentas.VISTA
             this.dtgUsuarios.Name = "dtgUsuarios";
             this.dtgUsuarios.ReadOnly = true;
             this.dtgUsuarios.RowHeadersVisible = false;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Orchid;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Orchid;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgUsuarios.Size = new System.Drawing.Size(582, 296);
+            this.dtgUsuarios.Size = new System.Drawing.Size(679, 352);
             this.dtgUsuarios.TabIndex = 1;
             this.dtgUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsuarios_CellClick);
             // 
@@ -148,7 +148,7 @@ namespace AppVentas.VISTA
             this.txtPass.Margin = new System.Windows.Forms.Padding(5, 4, 5, 29);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(285, 26);
+            this.txtPass.Size = new System.Drawing.Size(382, 26);
             this.txtPass.TabIndex = 5;
             // 
             // label3
@@ -169,7 +169,7 @@ namespace AppVentas.VISTA
             this.txtCorreo.Location = new System.Drawing.Point(124, 6);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(5, 4, 5, 29);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(285, 26);
+            this.txtCorreo.Size = new System.Drawing.Size(382, 26);
             this.txtCorreo.TabIndex = 3;
             // 
             // btnActualizar
@@ -218,11 +218,11 @@ namespace AppVentas.VISTA
             this.panel3.Controls.Add(this.btnActualizar);
             this.panel3.Controls.Add(this.btnAgregar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(618, 235);
+            this.panel3.Location = new System.Drawing.Point(715, 235);
             this.panel3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(10, 20, 20, 0);
-            this.panel3.Size = new System.Drawing.Size(139, 322);
+            this.panel3.Size = new System.Drawing.Size(139, 378);
             this.panel3.TabIndex = 6;
             // 
             // btnEliminar
@@ -254,7 +254,7 @@ namespace AppVentas.VISTA
             this.panel5.Location = new System.Drawing.Point(185, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(420, 158);
+            this.panel5.Size = new System.Drawing.Size(517, 158);
             this.panel5.TabIndex = 1;
             // 
             // label5
@@ -277,7 +277,7 @@ namespace AppVentas.VISTA
             this.panel6.Location = new System.Drawing.Point(0, 97);
             this.panel6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(418, 59);
+            this.panel6.Size = new System.Drawing.Size(515, 59);
             this.panel6.TabIndex = 6;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
@@ -289,7 +289,7 @@ namespace AppVentas.VISTA
             this.txtPassAntigua.Margin = new System.Windows.Forms.Padding(5, 4, 5, 29);
             this.txtPassAntigua.Name = "txtPassAntigua";
             this.txtPassAntigua.PasswordChar = '*';
-            this.txtPassAntigua.Size = new System.Drawing.Size(285, 26);
+            this.txtPassAntigua.Size = new System.Drawing.Size(382, 26);
             this.txtPassAntigua.TabIndex = 7;
             // 
             // label4
@@ -311,14 +311,14 @@ namespace AppVentas.VISTA
             this.panel2.Location = new System.Drawing.Point(10, 77);
             this.panel2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(747, 158);
+            this.panel2.Size = new System.Drawing.Size(844, 158);
             this.panel2.TabIndex = 5;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.btnLimpiar);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(608, 0);
+            this.panel7.Location = new System.Drawing.Point(705, 0);
             this.panel7.Name = "panel7";
             this.panel7.Padding = new System.Windows.Forms.Padding(13, 0, 20, 0);
             this.panel7.Size = new System.Drawing.Size(139, 158);
@@ -342,14 +342,15 @@ namespace AppVentas.VISTA
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::AppVentas.Properties.Resources.aprobar;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::AppVentas.Properties.Resources.trabajo_en_equipo;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(20);
             this.pictureBox1.Size = new System.Drawing.Size(185, 158);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -357,7 +358,7 @@ namespace AppVentas.VISTA
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(259, 12);
+            this.label1.Location = new System.Drawing.Point(308, 12);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(197, 19);
@@ -372,7 +373,7 @@ namespace AppVentas.VISTA
             this.panel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(10);
-            this.panel1.Size = new System.Drawing.Size(747, 67);
+            this.panel1.Size = new System.Drawing.Size(844, 67);
             this.panel1.TabIndex = 4;
             // 
             // panel9
@@ -382,7 +383,7 @@ namespace AppVentas.VISTA
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(10, 10);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(727, 47);
+            this.panel9.Size = new System.Drawing.Size(824, 47);
             this.panel9.TabIndex = 1;
             // 
             // FrmUsuarios
@@ -390,7 +391,7 @@ namespace AppVentas.VISTA
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(767, 567);
+            this.ClientSize = new System.Drawing.Size(864, 623);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);

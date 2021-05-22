@@ -58,15 +58,28 @@
   <ItemGroup>
     <Compile Include="DAO\ClsAcceso.cs" />
     <Compile Include="DAO\ClsDClientes.cs" />
+    <Compile Include="DAO\ClsDdashboard.cs" />
     <Compile Include="DAO\ClsDDocumentos.cs" />
     <Compile Include="DAO\ClsDProductos.cs" />
     <Compile Include="DAO\ClsDRegistroUsuario.cs" />
     <Compile Include="DAO\ClsDUsuarios.cs" />
+    <Compile Include="DAO\ClsDVenta.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="VISTA\FrmActividad.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VISTA\FrmActividad.Designer.cs">
       <DependentUpon>FrmActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VISTA\FrmBuscarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VISTA\FrmBuscarProductos.Designer.cs">
+      <DependentUpon>FrmBuscarProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="VISTA\FrmUsuarios.cs">
       <SubType>Form</SubType>
@@ -157,6 +170,9 @@
     <EmbeddedResource Include="VISTA\FrmActividad.resx">
       <DependentUpon>FrmActividad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VISTA\FrmBuscarProductos.resx">
+      <DependentUpon>FrmBuscarProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VISTA\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,14 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="VISTA\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +234,31 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Agregar2.png" />
+    <None Include="Resources\modificar2.png" />
+    <None Include="Resources\Modificar %282%29.png" />
+    <None Include="Resources\eliminarcliente.png" />
+    <None Include="Resources\agregarcliente.png" />
+    <None Include="Resources\ventas.png" />
+    <None Include="Resources\Documento.png" />
+    <None Include="Resources\productos.png" />
+    <None Include="Resources\clientes.png" />
+    <None Include="Resources\Limpiar.png" />
+    <None Include="Resources\Agregar1.png" />
+    <None Include="Resources\modificar1.png" />
+    <None Include="Resources\Eliminar.png" />
+    <None Include="Resources\Modificar.png" />
+    <None Include="Resources\Agregar.png" />
+    <None Include="Resources\maximizar.png" />
+    <None Include="Resources\minimizar.png" />
+    <None Include="Resources\cerrar.png" />
+    <None Include="Resources\-cerrar.png" />
+    <None Include="Resources\carrito-de-compras.png" />
+    <None Include="Resources\producto1.png" />
+    <None Include="Resources\tiendas1.png" />
+    <None Include="Resources\trabajo-en-equipo1.png" />
+    <None Include="Resources\-cerrar1.png" />
+    <None Include="Resources\usuario1.png" />
     <None Include="Resources\caja-registradora.png" />
     <None Include="Resources\tarjeta-de-identificacion.png" />
     <None Include="Resources\archivo.png" />

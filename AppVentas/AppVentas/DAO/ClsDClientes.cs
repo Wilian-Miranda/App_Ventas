@@ -31,7 +31,7 @@ namespace AppVentas.DAO
             {
                 using (sistema_ventasEntities db = new sistema_ventasEntities())
                 {
-                    int actualizar = vCliente.iDCliente;                                       
+                    int actualizar = vCliente.iDCliente;
                     tb_cliente dbCliente = db.tb_cliente.Where(x => x.iDCliente == actualizar).Select(x => x).FirstOrDefault();
                     dbCliente.nombreCliente = vCliente.nombreCliente;
                     dbCliente.direccionCliente = vCliente.direccionCliente;
@@ -66,6 +66,17 @@ namespace AppVentas.DAO
                 throw;
             }
         }
+
+        public List<tb_cliente> CargarComboCliente()
+        {
+            List<tb_cliente> tb_Clientes = new List<tb_cliente>();
+            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            {
+                tb_Clientes = db.tb_cliente.ToList();
+            }
+            return tb_Clientes;
+        }
+
 
     }
 }

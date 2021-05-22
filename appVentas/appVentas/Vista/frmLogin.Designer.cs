@@ -29,6 +29,7 @@ namespace AppVentas
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.btbIniciarSecion = new System.Windows.Forms.Button();
@@ -37,12 +38,18 @@ namespace AppVentas
             this.label3 = new System.Windows.Forms.Label();
             this.btnRegistroUsuario = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlcontroles = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            this.pnlcontroles.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtUser
             // 
+            this.txtUser.BackColor = System.Drawing.Color.Wheat;
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUser.Location = new System.Drawing.Point(136, 99);
             this.txtUser.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -52,10 +59,12 @@ namespace AppVentas
             // 
             // txtPass
             // 
+            this.txtPass.BackColor = System.Drawing.Color.Wheat;
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPass.Location = new System.Drawing.Point(136, 147);
             this.txtPass.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(388, 26);
             this.txtPass.TabIndex = 1;
             // 
@@ -119,11 +128,53 @@ namespace AppVentas
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Sienna;
+            this.panel1.Controls.Add(this.pnlcontroles);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(547, 30);
             this.panel1.TabIndex = 6;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // pnlcontroles
+            // 
+            this.pnlcontroles.Controls.Add(this.button1);
+            this.pnlcontroles.Controls.Add(this.btnCerrar);
+            this.pnlcontroles.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlcontroles.Location = new System.Drawing.Point(457, 0);
+            this.pnlcontroles.Name = "pnlcontroles";
+            this.pnlcontroles.Size = new System.Drawing.Size(90, 30);
+            this.pnlcontroles.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Sienna;
+            this.button1.BackgroundImage = global::AppVentas.Properties.Resources.minimizar;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(30, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 30);
+            this.button1.TabIndex = 8;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Sienna;
+            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Location = new System.Drawing.Point(60, 0);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(30, 30);
+            this.btnCerrar.TabIndex = 6;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // panel2
             // 
@@ -150,10 +201,13 @@ namespace AppVentas
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUser);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.panel1.ResumeLayout(false);
+            this.pnlcontroles.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -172,6 +226,9 @@ namespace AppVentas
         private System.Windows.Forms.Button btnRegistroUsuario;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlcontroles;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }
 

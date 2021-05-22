@@ -123,5 +123,10 @@ namespace AppVentas.VISTA
             txtPrecio.Clear();
             txtEstado.Clear();
         }
+
+        private void dtgProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

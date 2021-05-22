@@ -70,5 +70,15 @@ namespace AppVentas.DAO
             }
             
         }
+
+        public List<tb_documento> CargarComboDocumentos()
+        {
+            List<tb_documento> DBLista = new List<tb_documento>();
+            using(sistema_ventasEntities db = new sistema_ventasEntities())
+            {
+                DBLista = db.tb_documento.ToList();
+            }
+            return DBLista;
+        }
     }
 }
